@@ -1,0 +1,23 @@
+<ion-content>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Menu</h1>
+    <div class="avatar">
+      <ion-img src="assets\images\face.png"></ion-img>
+    </div>
+  </div>
+
+  <!-- SEARCHBAR -->
+  <app-searchbar></app-searchbar>
+
+  <!-- CATEGORY -->
+  <div class="categories">
+    <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
+  </div>
+
+  <!-- PRODUCTS -->
+  <h1 class="list-header">Popular</h1>
+  <div class="food-list">
+    <app-food-card *ngFor="let food of foods" [item]="food"></app-food-card>
+  </div>
+</ion-content>

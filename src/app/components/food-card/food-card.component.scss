@@ -1,0 +1,54 @@
+.card {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  background: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border-radius: 2.5rem;
+  margin-bottom: 1.5rem;
+
+  .card-content {
+    text-align: center;
+
+    .title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+      color: #1d1d1d;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffb800;
+      margin-top: 0;
+
+      sup {
+        font-size: 1rem;
+        margin-right: 2px;
+        color: #ffb800;
+      }
+    }
+
+    ion-buttons {
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      ion-button {
+        --background: #6b45bc;
+        font-weight: 700;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        --padding-start: 0;
+        --padding-end: 0;
+        --padding-top: 0;
+        --padding-bottom: 0;
+      }
+    }
+  }
+}
