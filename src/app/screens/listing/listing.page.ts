@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Category } from 'src/app/models/category.model';
 import { Food } from 'src/app/models/food.model';
 import { FoodService } from 'src/app/services/food.service';
@@ -12,7 +13,7 @@ export class ListingPage implements OnInit {
   categories: Category[] = [];
   foods: Food[] = [];
 
-  constructor(private foodService: FoodService) {}
+  constructor(private foodService: FoodService, private router: Router) {}
 
   ngOnInit() {
     this.getCategories();
@@ -46,5 +47,9 @@ export class ListingPage implements OnInit {
         active: false,
       },
     ];
+  }
+
+  goToDetailPage(id: number) {
+    this.router.navigate(['detail', id]);
   }
 }

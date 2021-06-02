@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/home/listing">
+        <ion-icon slot="icon-only" color='light' name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button>
+        <ion-icon slot="icon-only" color='light' name="d-heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
 
+  <!-- FOOD DETAIL CARD -->
+  <div class="card">
+    <div class="image">
+      <ion-img [src]="food.image"></ion-img>
+    </div>
+
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">{{food.title}}</h1>
+        <p class="ion-no-margin"><sup>$</sup> {{food.price | number: '1.2'}}</p>
+      </div>
+    </div>
+
+    <div class="rates">
+      <app-badge icon="d-time-forward" text="30m"></app-badge>
+      <app-badge icon="star-outline" text="4.5"></app-badge>
+    </div>
+
+    <div class="about">
+      <h1>About</h1>
+      <p>{{food.description}}</p>
+    </div>
+
+    <app-button (click)="addItemToCart()">Add to Cart</app-button>
+  </div>
 </ion-content>
